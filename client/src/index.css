@@ -43,83 +43,81 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  /* JP Studio Brand Colors */
+  --primary: #D4A5A5; /* Rosa Sofisticado */
+  --primary-foreground: #FFFFFF;
+  --secondary: #E75480; /* Rosa Vibrante */
+  --secondary-foreground: #FFFFFF;
+  --accent: #E8B4A8; /* Ouro Rosado */
+  --accent-foreground: #2C2C2C;
+  --sidebar-primary: #D4A5A5;
+  --sidebar-primary-foreground: #FFFFFF;
+  --chart-1: #D4A5A5;
+  --chart-2: #E75480;
+  --chart-3: #E8B4A8;
+  --chart-4: #2C2C2C;
+  --chart-5: #FFFFFF;
+  --radius: 1.5rem; /* 24px for rounded-3xl */
+  --background: #FFFFFF;
+  --foreground: #2C2C2C;
+  --card: #FFFFFF;
+  --card-foreground: #2C2C2C;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C2C2C;
+  --muted: #F5F5F0;
+  --muted-foreground: #8B8B8B;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E3E1E2;
+  --input: #F5F5F0;
+  --ring: #D4A5A5;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C2C2C;
+  --sidebar-accent: #F5F5F0;
+  --sidebar-accent-foreground: #2C2C2C;
+  --sidebar-border: #E3E1E2;
+  --sidebar-ring: #D4A5A5;
 }
 
-.dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
-}
-
+/* Typography */
 @layer base {
+  :root {
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+  }
+
+  h1 {
+    @apply text-7xl md:text-8xl;
+  }
+
+  h2 {
+    @apply text-5xl md:text-6xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  p {
+    @apply text-base md:text-lg;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -133,26 +131,137 @@
   }
 }
 
+/* Custom Animations */
+@keyframes blur-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
+  .animate-blur-in {
+    animation: blur-in 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-scale {
+    animation: fade-in-scale 0.7s ease-out forwards;
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 30s linear infinite;
+  }
+
+  .animate-scroll-up {
+    animation: scroll-up 30s linear infinite;
+  }
+
+  .animate-scroll-down:hover {
+    animation-duration: 60s;
+  }
+
+  .animate-scroll-up:hover {
+    animation-duration: 60s;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s ease-out forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s ease-out forwards;
+  }
+
+  /* Multi-layered shadow for premium feel */
+  .shadow-premium {
+    box-shadow:
+      rgba(14, 63, 126, 0.04) 0px 0px 0px 1px,
+      rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px,
+      rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+      rgba(42, 51, 70, 0.04) 0px 6px 6px -3px,
+      rgba(14, 63, 126, 0.04) 0px 12px 12px -6px,
+      rgba(14, 63, 126, 0.04) 0px 24px 24px -12px;
+  }
+
+  /* Container utility */
   .container {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem; /* 16px - mobile padding */
-    padding-right: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
   }
 
   .flex {
@@ -160,18 +269,51 @@
     min-width: 0;
   }
 
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem; /* 24px - tablet padding */
-      padding-right: 1.5rem;
-    }
+  /* Gradient overlay for hero */
+  .gradient-overlay {
+    position: relative;
   }
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem; /* 32px - desktop padding */
-      padding-right: 2rem;
-      max-width: 1280px; /* Standard content width */
-    }
+  .gradient-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.5) 50%, transparent 100%);
+    pointer-events: none;
+  }
+
+  /* Text balance for better typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Scroll mask for testimonials */
+  .scroll-mask {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scroll-mask::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), transparent);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  .scroll-mask::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 128px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), transparent);
+    pointer-events: none;
+    z-index: 10;
   }
 }
